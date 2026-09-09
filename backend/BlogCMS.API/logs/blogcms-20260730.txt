@@ -1,0 +1,357 @@
+2026-07-30 21:56:34.854 +05:30 [INF] Starting Blog CMS API
+2026-07-30 21:56:35.505 +05:30 [INF] Using in-memory cache
+2026-07-30 21:56:35.854 +05:30 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-30 21:56:37.056 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2026-07-30 21:56:37.075 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2026-07-30 21:56:37.549 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2026-07-30 21:56:37.683 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2026-07-30 21:56:37.688 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2026-07-30 21:56:37.726 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-07-30 21:56:37.810 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-07-30 21:56:37.836 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Posts" AS "p")
+2026-07-30 21:56:37.840 +05:30 [INF] Database seeded successfully
+2026-07-30 21:56:37.844 +05:30 [INF] Blog CMS API started successfully
+2026-07-30 21:56:37.942 +05:30 [INF] Creating key {fd7cdf7e-fe71-4394-93d7-756e8d9b22e1} with creation date 2026-07-30 16:26:37Z, activation date 2026-07-30 16:26:37Z, and expiration date 2026-10-28 16:26:37Z.
+2026-07-30 21:56:37.962 +05:30 [INF] Writing data to file 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys\key-fd7cdf7e-fe71-4394-93d7-756e8d9b22e1.xml'.
+2026-07-30 21:56:38.100 +05:30 [INF] Now listening on: http://localhost:5000
+2026-07-30 21:56:38.106 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-30 21:56:38.108 +05:30 [INF] Hosting environment: Development
+2026-07-30 21:56:38.111 +05:30 [INF] Content root path: C:\Users\ASUS\blog cms\backend\BlogCMS.API
+2026-07-30 22:08:09.790 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts - null null
+2026-07-30 22:08:10.009 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:08:10.018 +05:30 [INF] No cached response available for this request.
+2026-07-30 22:08:10.080 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:08:10.140 +05:30 [INF] Route matched with {action = "GetPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] GetPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-07-30 22:08:10.308 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."Content", "p"."CreatedAt", "p"."CreatedBy", "p"."IsPublished", "p"."Title", "p"."UpdatedAt"
+FROM "Posts" AS "p"
+WHERE "p"."IsPublished"
+ORDER BY "p"."CreatedAt" DESC
+2026-07-30 22:08:10.427 +05:30 [INF] Retrieved 6 posts from database and cached them
+2026-07-30 22:08:10.435 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[BlogCMS.API.Models.Post, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BlogCMS.API.DTOs.PostResponseDto, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-30 22:08:10.471 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API) in 320.3189ms
+2026-07-30 22:08:10.474 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:08:10.475 +05:30 [INF] The response could not be cached for this request.
+2026-07-30 22:08:10.483 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts - 200 null application/json; charset=utf-8 699.2506ms
+2026-07-30 22:08:20.771 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts?category=Tech - null null
+2026-07-30 22:08:20.780 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:08:20.782 +05:30 [INF] No cached response available for this request.
+2026-07-30 22:08:20.790 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:08:20.792 +05:30 [INF] Route matched with {action = "GetPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] GetPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-07-30 22:08:20.957 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__category_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."Content", "p"."CreatedAt", "p"."CreatedBy", "p"."IsPublished", "p"."Title", "p"."UpdatedAt"
+FROM "Posts" AS "p"
+WHERE "p"."Category" = @__category_0 AND "p"."IsPublished"
+ORDER BY "p"."CreatedAt" DESC
+2026-07-30 22:08:20.961 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[BlogCMS.API.Models.Post, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BlogCMS.API.DTOs.PostResponseDto, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-30 22:08:20.964 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API) in 169.4613ms
+2026-07-30 22:08:20.965 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:08:20.966 +05:30 [INF] The response could not be cached for this request.
+2026-07-30 22:08:20.968 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts?category=Tech - 200 null application/json; charset=utf-8 197.1056ms
+2026-07-30 22:09:06.567 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts?category=News - null null
+2026-07-30 22:09:06.573 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:09:06.575 +05:30 [INF] No cached response available for this request.
+2026-07-30 22:09:06.580 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:09:06.582 +05:30 [INF] Route matched with {action = "GetPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] GetPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-07-30 22:09:06.589 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__category_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."Content", "p"."CreatedAt", "p"."CreatedBy", "p"."IsPublished", "p"."Title", "p"."UpdatedAt"
+FROM "Posts" AS "p"
+WHERE "p"."Category" = @__category_0 AND "p"."IsPublished"
+ORDER BY "p"."CreatedAt" DESC
+2026-07-30 22:09:06.593 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[BlogCMS.API.Models.Post, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BlogCMS.API.DTOs.PostResponseDto, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-30 22:09:06.594 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API) in 9.3922ms
+2026-07-30 22:09:06.595 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:09:06.596 +05:30 [INF] The response could not be cached for this request.
+2026-07-30 22:09:06.598 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts?category=News - 200 null application/json; charset=utf-8 30.1043ms
+2026-07-30 22:09:10.980 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts - null null
+2026-07-30 22:09:10.983 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:09:10.984 +05:30 [INF] No cached response available for this request.
+2026-07-30 22:09:10.985 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:09:10.987 +05:30 [INF] Route matched with {action = "GetPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] GetPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-07-30 22:09:10.992 +05:30 [INF] Retrieved all posts from cache
+2026-07-30 22:09:11.013 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[BlogCMS.API.Models.Post, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BlogCMS.API.DTOs.PostResponseDto, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-30 22:09:11.015 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API) in 23.7215ms
+2026-07-30 22:09:11.016 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:09:11.017 +05:30 [INF] The response could not be cached for this request.
+2026-07-30 22:09:11.018 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts - 200 null application/json; charset=utf-8 37.761ms
+2026-07-30 22:11:03.654 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts - null null
+2026-07-30 22:11:03.659 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:11:03.660 +05:30 [INF] No cached response available for this request.
+2026-07-30 22:11:03.663 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:11:03.665 +05:30 [INF] Route matched with {action = "GetPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] GetPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-07-30 22:11:03.667 +05:30 [INF] Retrieved all posts from cache
+2026-07-30 22:11:03.668 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[BlogCMS.API.Models.Post, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BlogCMS.API.DTOs.PostResponseDto, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-30 22:11:03.670 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API) in 3.7809ms
+2026-07-30 22:11:03.672 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:11:03.673 +05:30 [INF] The response could not be cached for this request.
+2026-07-30 22:11:03.675 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts - 200 null application/json; charset=utf-8 20.6149ms
+2026-07-30 22:18:07.674 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/Auth/login - null null
+2026-07-30 22:18:07.676 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:18:07.677 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/Auth/login - 204 null null 3.4091ms
+2026-07-30 22:18:07.681 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/Auth/login - application/json 56
+2026-07-30 22:18:07.686 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:18:07.687 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.AuthController.Login (BlogCMS.API)'
+2026-07-30 22:18:07.698 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BlogCMS.API.DTOs.AuthResponseDto]] Login(BlogCMS.API.DTOs.LoginDto) on controller BlogCMS.API.Controllers.AuthController (BlogCMS.API).
+2026-07-30 22:18:07.760 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-07-30 22:18:07.859 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-07-30 22:18:07.867 +05:30 [INF] Executed action BlogCMS.API.Controllers.AuthController.Login (BlogCMS.API) in 168.1783ms
+2026-07-30 22:18:07.869 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.AuthController.Login (BlogCMS.API)'
+2026-07-30 22:18:07.870 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/v1/Auth/login - 401 null application/json; charset=utf-8 188.8521ms
+2026-07-30 22:18:16.456 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/Auth/login - null null
+2026-07-30 22:18:16.461 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:18:16.462 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/Auth/login - 204 null null 6.7015ms
+2026-07-30 22:18:16.468 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/Auth/login - application/json 56
+2026-07-30 22:18:16.470 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:18:16.471 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.AuthController.Login (BlogCMS.API)'
+2026-07-30 22:18:16.473 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BlogCMS.API.DTOs.AuthResponseDto]] Login(BlogCMS.API.DTOs.LoginDto) on controller BlogCMS.API.Controllers.AuthController (BlogCMS.API).
+2026-07-30 22:18:16.482 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-07-30 22:18:16.567 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-07-30 22:18:16.569 +05:30 [INF] Executed action BlogCMS.API.Controllers.AuthController.Login (BlogCMS.API) in 92.581ms
+2026-07-30 22:18:16.571 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.AuthController.Login (BlogCMS.API)'
+2026-07-30 22:18:16.573 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/v1/Auth/login - 401 null application/json; charset=utf-8 105.0888ms
+2026-07-30 22:18:31.515 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts - null null
+2026-07-30 22:18:31.518 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:18:31.519 +05:30 [INF] No cached response available for this request.
+2026-07-30 22:18:31.520 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:18:31.522 +05:30 [INF] Route matched with {action = "GetPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] GetPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-07-30 22:18:31.525 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."Content", "p"."CreatedAt", "p"."CreatedBy", "p"."IsPublished", "p"."Title", "p"."UpdatedAt"
+FROM "Posts" AS "p"
+WHERE "p"."IsPublished"
+ORDER BY "p"."CreatedAt" DESC
+2026-07-30 22:18:31.528 +05:30 [INF] Retrieved 6 posts from database and cached them
+2026-07-30 22:18:31.529 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[BlogCMS.API.Models.Post, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BlogCMS.API.DTOs.PostResponseDto, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-30 22:18:31.530 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API) in 6.837ms
+2026-07-30 22:18:31.532 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:18:31.533 +05:30 [INF] The response could not be cached for this request.
+2026-07-30 22:18:31.534 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts - 200 null application/json; charset=utf-8 18.7628ms
+2026-07-30 22:22:06.601 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts - null null
+2026-07-30 22:22:06.605 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:22:06.606 +05:30 [INF] No cached response available for this request.
+2026-07-30 22:22:06.607 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:22:06.608 +05:30 [INF] Route matched with {action = "GetPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] GetPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-07-30 22:22:06.610 +05:30 [INF] Retrieved all posts from cache
+2026-07-30 22:22:06.612 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[BlogCMS.API.Models.Post, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BlogCMS.API.DTOs.PostResponseDto, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-30 22:22:06.614 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API) in 4.7459ms
+2026-07-30 22:22:06.615 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:22:06.616 +05:30 [INF] The response could not be cached for this request.
+2026-07-30 22:22:06.617 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts - 200 null application/json; charset=utf-8 16.0307ms
+2026-07-30 22:29:13.439 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts - null null
+2026-07-30 22:29:13.448 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:29:13.453 +05:30 [INF] No cached response available for this request.
+2026-07-30 22:29:13.457 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:29:13.458 +05:30 [INF] Route matched with {action = "GetPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] GetPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-07-30 22:29:13.466 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."Content", "p"."CreatedAt", "p"."CreatedBy", "p"."IsPublished", "p"."Title", "p"."UpdatedAt"
+FROM "Posts" AS "p"
+WHERE "p"."IsPublished"
+ORDER BY "p"."CreatedAt" DESC
+2026-07-30 22:29:13.470 +05:30 [INF] Retrieved 6 posts from database and cached them
+2026-07-30 22:29:13.475 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[BlogCMS.API.Models.Post, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BlogCMS.API.DTOs.PostResponseDto, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-30 22:29:13.477 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API) in 15.5215ms
+2026-07-30 22:29:13.480 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:29:13.487 +05:30 [INF] The response could not be cached for this request.
+2026-07-30 22:29:13.493 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts - 200 null application/json; charset=utf-8 53.1242ms
+2026-07-30 22:29:19.060 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts - null null
+2026-07-30 22:29:19.062 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:29:19.063 +05:30 [INF] No cached response available for this request.
+2026-07-30 22:29:19.063 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:29:19.064 +05:30 [INF] Route matched with {action = "GetPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] GetPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-07-30 22:29:19.068 +05:30 [INF] Retrieved all posts from cache
+2026-07-30 22:29:19.068 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[BlogCMS.API.Models.Post, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BlogCMS.API.DTOs.PostResponseDto, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-30 22:29:19.070 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API) in 2.9042ms
+2026-07-30 22:29:19.071 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:29:19.072 +05:30 [INF] The response could not be cached for this request.
+2026-07-30 22:29:19.073 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts - 200 null application/json; charset=utf-8 13.7469ms
+2026-07-30 22:39:33.238 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/Auth/login - null null
+2026-07-30 22:39:33.241 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:39:33.242 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/Auth/login - 204 null null 4.4569ms
+2026-07-30 22:39:33.247 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/Auth/login - application/json 55
+2026-07-30 22:39:33.249 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:39:33.251 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.AuthController.Login (BlogCMS.API)'
+2026-07-30 22:39:33.252 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BlogCMS.API.DTOs.AuthResponseDto]] Login(BlogCMS.API.DTOs.LoginDto) on controller BlogCMS.API.Controllers.AuthController (BlogCMS.API).
+2026-07-30 22:39:33.295 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-07-30 22:39:33.385 +05:30 [INF] User logged in successfully: admin@blogcms.com
+2026-07-30 22:39:33.499 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a0"."Name"
+FROM "AspNetUserRoles" AS "a"
+INNER JOIN "AspNetRoles" AS "a0" ON "a"."RoleId" = "a0"."Id"
+WHERE "a"."UserId" = @__userId_0
+2026-07-30 22:39:33.564 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2026-07-30 22:39:33.570 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-07-30 22:39:33.765 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@p18='?' (Size = 36), @p0='?' (DbType = Int32), @p1='?' (Size = 36), @p19='?' (Size = 36), @p2='?' (DbType = DateTime), @p3='?' (Size = 17), @p4='?' (DbType = Boolean), @p5='?' (Size = 20), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 17), @p9='?' (Size = 17), @p10='?' (Size = 84), @p11='?', @p12='?' (DbType = Boolean), @p13='?' (Size = 44), @p14='?' (DbType = DateTime), @p15='?' (Size = 32), @p16='?' (DbType = Boolean), @p17='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "CreatedAt" = @p2, "Email" = @p3, "EmailConfirmed" = @p4, "FullName" = @p5, "LockoutEnabled" = @p6, "LockoutEnd" = @p7, "NormalizedEmail" = @p8, "NormalizedUserName" = @p9, "PasswordHash" = @p10, "PhoneNumber" = @p11, "PhoneNumberConfirmed" = @p12, "RefreshToken" = @p13, "RefreshTokenExpiryTime" = @p14, "SecurityStamp" = @p15, "TwoFactorEnabled" = @p16, "UserName" = @p17
+WHERE "Id" = @p18 AND "ConcurrencyStamp" = @p19
+RETURNING 1;
+2026-07-30 22:39:33.790 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a0"."Name"
+FROM "AspNetUserRoles" AS "a"
+INNER JOIN "AspNetRoles" AS "a0" ON "a"."RoleId" = "a0"."Id"
+WHERE "a"."UserId" = @__userId_0
+2026-07-30 22:39:33.798 +05:30 [INF] Executing OkObjectResult, writing value of type 'BlogCMS.API.DTOs.AuthResponseDto'.
+2026-07-30 22:39:33.807 +05:30 [INF] Executed action BlogCMS.API.Controllers.AuthController.Login (BlogCMS.API) in 552.8192ms
+2026-07-30 22:39:33.809 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.AuthController.Login (BlogCMS.API)'
+2026-07-30 22:39:33.811 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/v1/Auth/login - 200 null application/json; charset=utf-8 564.346ms
+2026-07-30 22:39:33.818 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/Posts - null null
+2026-07-30 22:39:33.825 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:39:33.827 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/Posts - 204 null null 9.2732ms
+2026-07-30 22:39:33.832 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts - null null
+2026-07-30 22:39:33.835 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:39:33.914 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:39:33.915 +05:30 [INF] Route matched with {action = "GetPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] GetPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-07-30 22:39:33.918 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."Content", "p"."CreatedAt", "p"."CreatedBy", "p"."IsPublished", "p"."Title", "p"."UpdatedAt"
+FROM "Posts" AS "p"
+WHERE "p"."IsPublished"
+ORDER BY "p"."CreatedAt" DESC
+2026-07-30 22:39:33.921 +05:30 [INF] Retrieved 6 posts from database and cached them
+2026-07-30 22:39:33.922 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[BlogCMS.API.Models.Post, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BlogCMS.API.DTOs.PostResponseDto, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-30 22:39:33.924 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API) in 7.1565ms
+2026-07-30 22:39:33.927 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:39:33.928 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts - 200 null application/json; charset=utf-8 95.7581ms
+2026-07-30 22:39:57.108 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts - null null
+2026-07-30 22:39:57.111 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:39:57.112 +05:30 [INF] No cached response available for this request.
+2026-07-30 22:39:57.113 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:39:57.114 +05:30 [INF] Route matched with {action = "GetPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] GetPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-07-30 22:39:57.116 +05:30 [INF] Retrieved all posts from cache
+2026-07-30 22:39:57.117 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[BlogCMS.API.Models.Post, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BlogCMS.API.DTOs.PostResponseDto, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-30 22:39:57.119 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API) in 3.0687ms
+2026-07-30 22:39:57.122 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:39:57.123 +05:30 [INF] The response could not be cached for this request.
+2026-07-30 22:39:57.124 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts - 200 null application/json; charset=utf-8 15.2295ms
+2026-07-30 22:39:58.470 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/Posts - null null
+2026-07-30 22:39:58.472 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:39:58.473 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/Posts - 204 null null 3.6332ms
+2026-07-30 22:39:58.477 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts - null null
+2026-07-30 22:39:58.479 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:39:58.481 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:39:58.482 +05:30 [INF] Route matched with {action = "GetPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] GetPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-07-30 22:39:58.484 +05:30 [INF] Retrieved all posts from cache
+2026-07-30 22:39:58.485 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[BlogCMS.API.Models.Post, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BlogCMS.API.DTOs.PostResponseDto, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-30 22:39:58.486 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API) in 3.0631ms
+2026-07-30 22:39:58.487 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-07-30 22:39:58.489 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts - 200 null application/json; charset=utf-8 11.6583ms
+2026-07-30 22:49:37.520 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/Auth/register - null null
+2026-07-30 22:49:37.522 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:49:37.523 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/Auth/register - 204 null null 3.1146ms
+2026-07-30 22:49:37.525 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/Auth/register - application/json 66
+2026-07-30 22:49:37.529 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:49:37.531 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.AuthController.Register (BlogCMS.API)'
+2026-07-30 22:49:37.542 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BlogCMS.API.DTOs.AuthResponseDto]] Register(BlogCMS.API.DTOs.RegisterDto) on controller BlogCMS.API.Controllers.AuthController (BlogCMS.API).
+2026-07-30 22:49:37.551 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-07-30 22:49:37.581 +05:30 [INF] Executed action BlogCMS.API.Controllers.AuthController.Register (BlogCMS.API) in 37.9152ms
+2026-07-30 22:49:37.583 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.AuthController.Register (BlogCMS.API)'
+2026-07-30 22:49:37.584 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/v1/Auth/register - 400 null application/problem+json; charset=utf-8 58.4618ms
+2026-07-30 22:49:44.137 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/Auth/register - null null
+2026-07-30 22:49:44.142 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:49:44.143 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/Auth/register - 204 null null 5.4395ms
+2026-07-30 22:49:44.146 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/Auth/register - application/json 70
+2026-07-30 22:49:44.149 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:49:44.151 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.AuthController.Register (BlogCMS.API)'
+2026-07-30 22:49:44.152 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BlogCMS.API.DTOs.AuthResponseDto]] Register(BlogCMS.API.DTOs.RegisterDto) on controller BlogCMS.API.Controllers.AuthController (BlogCMS.API).
+2026-07-30 22:49:44.166 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 16)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-07-30 22:49:44.180 +05:30 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-07-30 22:49:44.182 +05:30 [INF] Executed action BlogCMS.API.Controllers.AuthController.Register (BlogCMS.API) in 28.1713ms
+2026-07-30 22:49:44.183 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.AuthController.Register (BlogCMS.API)'
+2026-07-30 22:49:44.184 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/v1/Auth/register - 400 null application/json; charset=utf-8 38.529ms
+2026-07-30 22:50:04.906 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/Auth/login - null null
+2026-07-30 22:50:04.908 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:50:04.909 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/Auth/login - 204 null null 3.3725ms
+2026-07-30 22:50:04.912 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/Auth/login - application/json 50
+2026-07-30 22:50:04.914 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:50:04.915 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.AuthController.Login (BlogCMS.API)'
+2026-07-30 22:50:04.916 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BlogCMS.API.DTOs.AuthResponseDto]] Login(BlogCMS.API.DTOs.LoginDto) on controller BlogCMS.API.Controllers.AuthController (BlogCMS.API).
+2026-07-30 22:50:04.920 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 16)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-07-30 22:50:04.922 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-07-30 22:50:04.923 +05:30 [INF] Executed action BlogCMS.API.Controllers.AuthController.Login (BlogCMS.API) in 5.8092ms
+2026-07-30 22:50:04.925 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.AuthController.Login (BlogCMS.API)'
+2026-07-30 22:50:04.926 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/v1/Auth/login - 401 null application/json; charset=utf-8 14.135ms
+2026-07-30 22:50:12.681 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/Auth/login - null null
+2026-07-30 22:50:12.684 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:50:12.686 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/Auth/login - 204 null null 4.5802ms
+2026-07-30 22:50:12.692 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/Auth/login - application/json 50
+2026-07-30 22:50:12.696 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:50:12.697 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.AuthController.Login (BlogCMS.API)'
+2026-07-30 22:50:12.698 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BlogCMS.API.DTOs.AuthResponseDto]] Login(BlogCMS.API.DTOs.LoginDto) on controller BlogCMS.API.Controllers.AuthController (BlogCMS.API).
+2026-07-30 22:50:12.704 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 16)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-07-30 22:50:12.708 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-07-30 22:50:12.709 +05:30 [INF] Executed action BlogCMS.API.Controllers.AuthController.Login (BlogCMS.API) in 8.1096ms
+2026-07-30 22:50:12.711 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.AuthController.Login (BlogCMS.API)'
+2026-07-30 22:50:12.712 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/v1/Auth/login - 401 null application/json; charset=utf-8 19.553ms
+2026-07-30 22:50:22.667 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/Auth/login - null null
+2026-07-30 22:50:22.671 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:50:22.672 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/Auth/login - 204 null null 4.8077ms
+2026-07-30 22:50:22.678 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/Auth/login - application/json 50
+2026-07-30 22:50:22.682 +05:30 [INF] CORS policy execution successful.
+2026-07-30 22:50:22.684 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.AuthController.Login (BlogCMS.API)'
+2026-07-30 22:50:22.686 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BlogCMS.API.DTOs.AuthResponseDto]] Login(BlogCMS.API.DTOs.LoginDto) on controller BlogCMS.API.Controllers.AuthController (BlogCMS.API).
+2026-07-30 22:50:22.690 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 16)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-07-30 22:50:22.694 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-07-30 22:50:22.696 +05:30 [INF] Executed action BlogCMS.API.Controllers.AuthController.Login (BlogCMS.API) in 7ms
+2026-07-30 22:50:22.697 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.AuthController.Login (BlogCMS.API)'
+2026-07-30 22:50:22.698 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/v1/Auth/login - 401 null application/json; charset=utf-8 20.3888ms
+2026-07-30 23:24:47.884 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/Posts - null null
+2026-07-30 23:24:47.931 +05:30 [INF] CORS policy execution successful.
+2026-07-30 23:24:47.937 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/Posts - 204 null null 59.3734ms

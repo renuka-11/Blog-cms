@@ -1,0 +1,759 @@
+2026-03-07 12:21:58.047 +05:30 [INF] Starting Blog CMS API
+2026-03-07 12:21:59.696 +05:30 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-07 12:22:15.312 +05:30 [ERR] An error occurred while seeding the database
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 52 - Unable to locate a Local Database Runtime installation. Verify that SQL Server Express is properly installed and that the Local Database Runtime feature is enabled.)
+ ---> System.ComponentModel.Win32Exception (2): The system cannot find the file specified.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass20_0.<<ExistsAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass20_0.<<ExistsAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass20_0.<<ExistsAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.EnsureCreatedAsync(CancellationToken cancellationToken)
+   at BlogCMS.API.Program.Main(String[] args) in C:\Users\ASUS\blog cms\backend\BlogCMS.API\Program.cs:line 257
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+2026-03-07 12:22:15.376 +05:30 [INF] Blog CMS API started successfully
+2026-03-07 12:22:15.402 +05:30 [INF] Creating key {df2fd349-21f4-4e62-97f5-223c1ba8501c} with creation date 2026-03-07 06:52:15Z, activation date 2026-03-07 06:52:15Z, and expiration date 2026-06-05 06:52:15Z.
+2026-03-07 12:22:15.431 +05:30 [INF] Writing data to file 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys\key-df2fd349-21f4-4e62-97f5-223c1ba8501c.xml'.
+2026-03-07 12:22:15.620 +05:30 [INF] Now listening on: http://localhost:5000
+2026-03-07 12:22:15.623 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-07 12:22:15.624 +05:30 [INF] Hosting environment: Development
+2026-03-07 12:22:15.625 +05:30 [INF] Content root path: C:\Users\ASUS\blog cms\backend\BlogCMS.API
+2026-03-07 12:22:34.253 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-03-07 12:22:34.550 +05:30 [INF] No cached response available for this request.
+2026-03-07 12:22:34.732 +05:30 [INF] The response could not be cached for this request.
+2026-03-07 12:22:34.744 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 0 null 501.8384ms
+2026-03-07 12:22:34.772 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/, Response status code: 404
+2026-03-07 12:22:40.305 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-03-07 12:22:40.316 +05:30 [INF] No cached response available for this request.
+2026-03-07 12:22:40.325 +05:30 [INF] The response could not be cached for this request.
+2026-03-07 12:22:40.328 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 0 null 23.3093ms
+2026-03-07 12:22:40.337 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/, Response status code: 404
+2026-03-07 12:25:15.225 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-03-07 12:25:15.245 +05:30 [INF] No cached response available for this request.
+2026-03-07 12:25:15.257 +05:30 [INF] The response could not be cached for this request.
+2026-03-07 12:25:15.259 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 0 null 33.9381ms
+2026-03-07 12:25:15.268 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/, Response status code: 404
+2026-03-07 12:25:17.527 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-03-07 12:25:17.536 +05:30 [INF] No cached response available for this request.
+2026-03-07 12:25:17.539 +05:30 [INF] The response could not be cached for this request.
+2026-03-07 12:25:17.546 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 0 null 18.3303ms
+2026-03-07 12:25:17.557 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/, Response status code: 404
+2026-03-07 20:48:34.821 +05:30 [INF] Starting Blog CMS API
+2026-03-07 20:48:35.089 +05:30 [FTL] Blog CMS API terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at BlogCMS.API.Program.Main(String[] args) in C:\Users\ASUS\blog cms\backend\BlogCMS.API\Program.cs:line 212
+2026-03-07 20:48:42.749 +05:30 [INF] Starting Blog CMS API
+2026-03-07 20:48:42.914 +05:30 [FTL] Blog CMS API terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at BlogCMS.API.Program.Main(String[] args) in C:\Users\ASUS\blog cms\backend\BlogCMS.API\Program.cs:line 212
+2026-03-07 20:56:19.788 +05:30 [INF] Starting Blog CMS API
+2026-03-07 20:56:19.931 +05:30 [FTL] Blog CMS API terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at BlogCMS.API.Program.Main(String[] args) in C:\Users\ASUS\blog cms\backend\BlogCMS.API\Program.cs:line 212
+2026-03-07 20:57:38.163 +05:30 [INF] Starting Blog CMS API
+2026-03-07 20:57:39.631 +05:30 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-07 20:57:40.624 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2026-03-07 20:57:40.779 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetRoles" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_AspNetRoles" PRIMARY KEY,
+    "Name" TEXT NULL,
+    "NormalizedName" TEXT NULL,
+    "ConcurrencyStamp" TEXT NULL
+);
+2026-03-07 20:57:40.789 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUsers" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_AspNetUsers" PRIMARY KEY,
+    "FullName" TEXT NULL,
+    "CreatedAt" TEXT NOT NULL,
+    "RefreshToken" TEXT NULL,
+    "RefreshTokenExpiryTime" TEXT NULL,
+    "UserName" TEXT NULL,
+    "NormalizedUserName" TEXT NULL,
+    "Email" TEXT NULL,
+    "NormalizedEmail" TEXT NULL,
+    "EmailConfirmed" INTEGER NOT NULL,
+    "PasswordHash" TEXT NULL,
+    "SecurityStamp" TEXT NULL,
+    "ConcurrencyStamp" TEXT NULL,
+    "PhoneNumber" TEXT NULL,
+    "PhoneNumberConfirmed" INTEGER NOT NULL,
+    "TwoFactorEnabled" INTEGER NOT NULL,
+    "LockoutEnd" TEXT NULL,
+    "LockoutEnabled" INTEGER NOT NULL,
+    "AccessFailedCount" INTEGER NOT NULL
+);
+2026-03-07 20:57:40.797 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Posts" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Posts" PRIMARY KEY AUTOINCREMENT,
+    "Title" TEXT NOT NULL,
+    "Category" TEXT NOT NULL,
+    "Content" TEXT NOT NULL,
+    "CreatedAt" TEXT NOT NULL,
+    "UpdatedAt" TEXT NULL,
+    "CreatedBy" TEXT NULL,
+    "IsPublished" INTEGER NOT NULL
+);
+2026-03-07 20:57:40.805 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetRoleClaims" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_AspNetRoleClaims" PRIMARY KEY AUTOINCREMENT,
+    "RoleId" TEXT NOT NULL,
+    "ClaimType" TEXT NULL,
+    "ClaimValue" TEXT NULL,
+    CONSTRAINT "FK_AspNetRoleClaims_AspNetRoles_RoleId" FOREIGN KEY ("RoleId") REFERENCES "AspNetRoles" ("Id") ON DELETE CASCADE
+);
+2026-03-07 20:57:40.810 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserClaims" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_AspNetUserClaims" PRIMARY KEY AUTOINCREMENT,
+    "UserId" TEXT NOT NULL,
+    "ClaimType" TEXT NULL,
+    "ClaimValue" TEXT NULL,
+    CONSTRAINT "FK_AspNetUserClaims_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2026-03-07 20:57:40.818 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserLogins" (
+    "LoginProvider" TEXT NOT NULL,
+    "ProviderKey" TEXT NOT NULL,
+    "ProviderDisplayName" TEXT NULL,
+    "UserId" TEXT NOT NULL,
+    CONSTRAINT "PK_AspNetUserLogins" PRIMARY KEY ("LoginProvider", "ProviderKey"),
+    CONSTRAINT "FK_AspNetUserLogins_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2026-03-07 20:57:40.823 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserRoles" (
+    "UserId" TEXT NOT NULL,
+    "RoleId" TEXT NOT NULL,
+    CONSTRAINT "PK_AspNetUserRoles" PRIMARY KEY ("UserId", "RoleId"),
+    CONSTRAINT "FK_AspNetUserRoles_AspNetRoles_RoleId" FOREIGN KEY ("RoleId") REFERENCES "AspNetRoles" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_AspNetUserRoles_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2026-03-07 20:57:40.830 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserTokens" (
+    "UserId" TEXT NOT NULL,
+    "LoginProvider" TEXT NOT NULL,
+    "Name" TEXT NOT NULL,
+    "Value" TEXT NULL,
+    CONSTRAINT "PK_AspNetUserTokens" PRIMARY KEY ("UserId", "LoginProvider", "Name"),
+    CONSTRAINT "FK_AspNetUserTokens_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2026-03-07 20:57:40.836 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AspNetRoleClaims_RoleId" ON "AspNetRoleClaims" ("RoleId");
+2026-03-07 20:57:40.841 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "RoleNameIndex" ON "AspNetRoles" ("NormalizedName");
+2026-03-07 20:57:40.859 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AspNetUserClaims_UserId" ON "AspNetUserClaims" ("UserId");
+2026-03-07 20:57:40.882 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AspNetUserLogins_UserId" ON "AspNetUserLogins" ("UserId");
+2026-03-07 20:57:40.887 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AspNetUserRoles_RoleId" ON "AspNetUserRoles" ("RoleId");
+2026-03-07 20:57:40.892 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "EmailIndex" ON "AspNetUsers" ("NormalizedEmail");
+2026-03-07 20:57:40.897 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "UserNameIndex" ON "AspNetUsers" ("NormalizedUserName");
+2026-03-07 20:57:40.900 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Posts_Category" ON "Posts" ("Category");
+2026-03-07 20:57:40.907 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Posts_CreatedAt" ON "Posts" ("CreatedAt");
+2026-03-07 20:57:40.911 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Posts_IsPublished" ON "Posts" ("IsPublished");
+2026-03-07 20:57:40.955 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2026-03-07 20:57:41.295 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2026-03-07 20:57:41.313 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2026-03-07 20:57:41.553 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (Size = 36), @p2='?' (Size = 5), @p3='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES (@p0, @p1, @p2, @p3);
+2026-03-07 20:57:41.565 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2026-03-07 20:57:41.568 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2026-03-07 20:57:41.578 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (Size = 36), @p2='?' (Size = 6), @p3='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES (@p0, @p1, @p2, @p3);
+2026-03-07 20:57:41.584 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2026-03-07 20:57:41.589 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2026-03-07 20:57:41.594 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (Size = 36), @p2='?' (Size = 4), @p3='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES (@p0, @p1, @p2, @p3);
+2026-03-07 20:57:41.614 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-03-07 20:57:41.779 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2026-03-07 20:57:41.786 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-03-07 20:57:41.898 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (DbType = Int32), @p2='?' (Size = 36), @p3='?' (DbType = DateTime), @p4='?' (Size = 17), @p5='?' (DbType = Boolean), @p6='?' (Size = 20), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 17), @p10='?' (Size = 17), @p11='?' (Size = 84), @p12='?', @p13='?' (DbType = Boolean), @p14='?', @p15='?' (DbType = DateTime), @p16='?' (Size = 32), @p17='?' (DbType = Boolean), @p18='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "ConcurrencyStamp", "CreatedAt", "Email", "EmailConfirmed", "FullName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "RefreshToken", "RefreshTokenExpiryTime", "SecurityStamp", "TwoFactorEnabled", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18);
+2026-03-07 20:57:41.907 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2026-03-07 20:57:41.936 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 36), @__p_1='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."UserId", "a"."RoleId"
+FROM "AspNetUserRoles" AS "a"
+WHERE "a"."UserId" = @__p_0 AND "a"."RoleId" = @__p_1
+LIMIT 1
+2026-03-07 20:57:41.943 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2026-03-07 20:57:41.961 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2026-03-07 20:57:41.965 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-03-07 20:57:41.981 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUserRoles" ("RoleId", "UserId")
+VALUES (@p0, @p1);
+2026-03-07 20:57:41.988 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p18='?' (Size = 36), @p0='?' (DbType = Int32), @p1='?' (Size = 36), @p19='?' (Size = 36), @p2='?' (DbType = DateTime), @p3='?' (Size = 17), @p4='?' (DbType = Boolean), @p5='?' (Size = 20), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 17), @p9='?' (Size = 17), @p10='?' (Size = 84), @p11='?', @p12='?' (DbType = Boolean), @p13='?', @p14='?' (DbType = DateTime), @p15='?' (Size = 32), @p16='?' (DbType = Boolean), @p17='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "CreatedAt" = @p2, "Email" = @p3, "EmailConfirmed" = @p4, "FullName" = @p5, "LockoutEnabled" = @p6, "LockoutEnd" = @p7, "NormalizedEmail" = @p8, "NormalizedUserName" = @p9, "PasswordHash" = @p10, "PhoneNumber" = @p11, "PhoneNumberConfirmed" = @p12, "RefreshToken" = @p13, "RefreshTokenExpiryTime" = @p14, "SecurityStamp" = @p15, "TwoFactorEnabled" = @p16, "UserName" = @p17
+WHERE "Id" = @p18 AND "ConcurrencyStamp" = @p19
+RETURNING 1;
+2026-03-07 20:57:41.997 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-03-07 20:57:42.089 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2026-03-07 20:57:42.092 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-03-07 20:57:42.102 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (DbType = Int32), @p2='?' (Size = 36), @p3='?' (DbType = DateTime), @p4='?' (Size = 18), @p5='?' (DbType = Boolean), @p6='?' (Size = 14), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 18), @p10='?' (Size = 18), @p11='?' (Size = 84), @p12='?', @p13='?' (DbType = Boolean), @p14='?', @p15='?' (DbType = DateTime), @p16='?' (Size = 32), @p17='?' (DbType = Boolean), @p18='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "ConcurrencyStamp", "CreatedAt", "Email", "EmailConfirmed", "FullName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "RefreshToken", "RefreshTokenExpiryTime", "SecurityStamp", "TwoFactorEnabled", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18);
+2026-03-07 20:57:42.106 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2026-03-07 20:57:42.110 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 36), @__p_1='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."UserId", "a"."RoleId"
+FROM "AspNetUserRoles" AS "a"
+WHERE "a"."UserId" = @__p_0 AND "a"."RoleId" = @__p_1
+LIMIT 1
+2026-03-07 20:57:42.113 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2026-03-07 20:57:42.115 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2026-03-07 20:57:42.118 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-03-07 20:57:42.123 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUserRoles" ("RoleId", "UserId")
+VALUES (@p0, @p1);
+2026-03-07 20:57:42.127 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p18='?' (Size = 36), @p0='?' (DbType = Int32), @p1='?' (Size = 36), @p19='?' (Size = 36), @p2='?' (DbType = DateTime), @p3='?' (Size = 18), @p4='?' (DbType = Boolean), @p5='?' (Size = 14), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 18), @p9='?' (Size = 18), @p10='?' (Size = 84), @p11='?', @p12='?' (DbType = Boolean), @p13='?', @p14='?' (DbType = DateTime), @p15='?' (Size = 32), @p16='?' (DbType = Boolean), @p17='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "CreatedAt" = @p2, "Email" = @p3, "EmailConfirmed" = @p4, "FullName" = @p5, "LockoutEnabled" = @p6, "LockoutEnd" = @p7, "NormalizedEmail" = @p8, "NormalizedUserName" = @p9, "PasswordHash" = @p10, "PhoneNumber" = @p11, "PhoneNumberConfirmed" = @p12, "RefreshToken" = @p13, "RefreshTokenExpiryTime" = @p14, "SecurityStamp" = @p15, "TwoFactorEnabled" = @p16, "UserName" = @p17
+WHERE "Id" = @p18 AND "ConcurrencyStamp" = @p19
+RETURNING 1;
+2026-03-07 20:57:42.155 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Posts" AS "p")
+2026-03-07 20:57:42.217 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 4), @p1='?' (Size = 477), @p2='?' (DbType = DateTime), @p3='?' (Size = 17), @p4='?' (DbType = Boolean), @p5='?' (Size = 33), @p6='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Posts" ("Category", "Content", "CreatedAt", "CreatedBy", "IsPublished", "Title", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+RETURNING "Id";
+2026-03-07 20:57:42.233 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 7), @p1='?' (Size = 621), @p2='?' (DbType = DateTime), @p3='?' (Size = 18), @p4='?' (DbType = Boolean), @p5='?' (Size = 34), @p6='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Posts" ("Category", "Content", "CreatedAt", "CreatedBy", "IsPublished", "Title", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+RETURNING "Id";
+2026-03-07 20:57:42.238 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 9), @p1='?' (Size = 578), @p2='?' (DbType = DateTime), @p3='?' (Size = 18), @p4='?' (DbType = Boolean), @p5='?' (Size = 41), @p6='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Posts" ("Category", "Content", "CreatedAt", "CreatedBy", "IsPublished", "Title", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+RETURNING "Id";
+2026-03-07 20:57:42.252 +05:30 [INF] Database seeded successfully
+2026-03-07 20:57:42.256 +05:30 [INF] Blog CMS API started successfully
+2026-03-07 20:57:42.363 +05:30 [INF] Now listening on: http://localhost:5000
+2026-03-07 20:57:42.366 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-07 20:57:42.368 +05:30 [INF] Hosting environment: Development
+2026-03-07 20:57:42.368 +05:30 [INF] Content root path: C:\Users\ASUS\blog cms\backend\BlogCMS.API
+2026-03-07 20:57:47.529 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-03-07 20:57:47.799 +05:30 [INF] No cached response available for this request.
+2026-03-07 20:57:47.950 +05:30 [INF] The response could not be cached for this request.
+2026-03-07 20:57:47.962 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 0 null 435.8837ms
+2026-03-07 20:57:47.987 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/, Response status code: 404
+2026-03-07 20:59:20.551 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger - null null
+2026-03-07 20:59:20.563 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger - 301 0 null 12.7592ms
+2026-03-07 20:59:20.570 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2026-03-07 20:59:20.734 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 163.7083ms
+2026-03-07 20:59:20.768 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui.css - null null
+2026-03-07 20:59:20.774 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.css - null null
+2026-03-07 20:59:20.777 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-standalone-preset.js - null null
+2026-03-07 20:59:20.777 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-bundle.js - null null
+2026-03-07 20:59:20.778 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.js - null null
+2026-03-07 20:59:20.802 +05:30 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2026-03-07 20:59:20.803 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.js - 200 null application/javascript;charset=utf-8 25.0156ms
+2026-03-07 20:59:20.804 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.css - 200 202 text/css 30.2162ms
+2026-03-07 20:59:20.821 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-03-07 20:59:20.823 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-03-07 20:59:20.830 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui.css - 200 152035 text/css 62.5751ms
+2026-03-07 20:59:20.831 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-standalone-preset.js - 200 230007 text/javascript 54.4204ms
+2026-03-07 20:59:20.858 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-03-07 20:59:20.862 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-bundle.js - 200 1426001 text/javascript 84.2587ms
+2026-03-07 20:59:21.050 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2026-03-07 20:59:21.088 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/favicon-32x32.png - null null
+2026-03-07 20:59:21.095 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2026-03-07 20:59:21.099 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/favicon-32x32.png - 200 628 image/png 10.5959ms
+2026-03-07 20:59:21.455 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 404.0707ms
+2026-03-07 21:04:11.010 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts - null null
+2026-03-07 21:04:11.060 +05:30 [INF] No cached response available for this request.
+2026-03-07 21:04:11.070 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-03-07 21:04:11.144 +05:30 [INF] Route matched with {action = "GetPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] GetPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-03-07 21:04:25.909 +05:30 [ERR] Error retrieving all posts
+StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (5000ms) - Last Connection Exception: It was not possible to connect to the redis server(s). ConnectTimeout, command=HMGET, timeout: 5000, inst: 0, qu: 0, qs: 0, aw: False, bw: CheckingForTimeout, rs: NotStarted, ws: Idle, in: 0, last-in: 0, cur-in: 0, sync-ops: 0, async-ops: 1, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: RENUKACHIKKAM(SE.Redis-v2.7.27.49176), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=0,Free=32767,Min=8,Max=32767), POOL: (Threads=6,QueuedItems=0,CompletedItems=897,Timers=4), v: 2.7.27.49176 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). ConnectTimeout
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.GetAndRefreshAsync(String key, Boolean getData, CancellationToken token)
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.GetAsync(String key, CancellationToken token)
+   at Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions.GetStringAsync(IDistributedCache cache, String key, CancellationToken token)
+   at BlogCMS.API.Repositories.PostRepository.GetAllPostsAsync() in C:\Users\ASUS\blog cms\backend\BlogCMS.API\Repositories\PostRepository.cs:line 32
+2026-03-07 21:04:25.981 +05:30 [ERR] Error getting posts
+StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (5000ms) - Last Connection Exception: It was not possible to connect to the redis server(s). ConnectTimeout, command=HMGET, timeout: 5000, inst: 0, qu: 0, qs: 0, aw: False, bw: CheckingForTimeout, rs: NotStarted, ws: Idle, in: 0, last-in: 0, cur-in: 0, sync-ops: 0, async-ops: 1, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: RENUKACHIKKAM(SE.Redis-v2.7.27.49176), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=0,Free=32767,Min=8,Max=32767), POOL: (Threads=6,QueuedItems=0,CompletedItems=897,Timers=4), v: 2.7.27.49176 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). ConnectTimeout
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.GetAndRefreshAsync(String key, Boolean getData, CancellationToken token)
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.GetAsync(String key, CancellationToken token)
+   at Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions.GetStringAsync(IDistributedCache cache, String key, CancellationToken token)
+   at BlogCMS.API.Repositories.PostRepository.GetAllPostsAsync() in C:\Users\ASUS\blog cms\backend\BlogCMS.API\Repositories\PostRepository.cs:line 32
+   at BlogCMS.API.Services.PostService.GetAllPostsAsync() in C:\Users\ASUS\blog cms\backend\BlogCMS.API\Services\PostService.cs:line 20
+   at BlogCMS.API.Controllers.PostsController.GetPosts(String category) in C:\Users\ASUS\blog cms\backend\BlogCMS.API\Controllers\PostsController.cs:line 41
+2026-03-07 21:04:26.011 +05:30 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-07 21:04:26.099 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API) in 14941.9001ms
+2026-03-07 21:04:26.103 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-03-07 21:04:26.110 +05:30 [INF] The response could not be cached for this request.
+2026-03-07 21:04:26.116 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts - 500 null application/json; charset=utf-8 15106.551ms
+2026-03-07 21:05:07.715 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts - null null
+2026-03-07 21:05:07.721 +05:30 [INF] No cached response available for this request.
+2026-03-07 21:05:07.738 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-03-07 21:05:07.744 +05:30 [INF] Route matched with {action = "GetPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] GetPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-03-07 21:05:12.877 +05:30 [ERR] Error retrieving all posts
+StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (5000ms) - Last Connection Exception: It was not possible to connect to the redis server(s). ConnectTimeout, command=HMGET, timeout: 5000, inst: 0, qu: 0, qs: 0, aw: False, bw: CheckingForTimeout, rs: NotStarted, ws: Idle, in: 0, last-in: 0, cur-in: 0, sync-ops: 0, async-ops: 2, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: RENUKACHIKKAM(SE.Redis-v2.7.27.49176), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=0,Free=32767,Min=8,Max=32767), POOL: (Threads=4,QueuedItems=0,CompletedItems=1149,Timers=5), v: 2.7.27.49176 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). ConnectTimeout
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.GetAndRefreshAsync(String key, Boolean getData, CancellationToken token)
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.GetAsync(String key, CancellationToken token)
+   at Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions.GetStringAsync(IDistributedCache cache, String key, CancellationToken token)
+   at BlogCMS.API.Repositories.PostRepository.GetAllPostsAsync() in C:\Users\ASUS\blog cms\backend\BlogCMS.API\Repositories\PostRepository.cs:line 32
+2026-03-07 21:05:12.887 +05:30 [ERR] Error getting posts
+StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (5000ms) - Last Connection Exception: It was not possible to connect to the redis server(s). ConnectTimeout, command=HMGET, timeout: 5000, inst: 0, qu: 0, qs: 0, aw: False, bw: CheckingForTimeout, rs: NotStarted, ws: Idle, in: 0, last-in: 0, cur-in: 0, sync-ops: 0, async-ops: 2, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: RENUKACHIKKAM(SE.Redis-v2.7.27.49176), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=0,Free=32767,Min=8,Max=32767), POOL: (Threads=4,QueuedItems=0,CompletedItems=1149,Timers=5), v: 2.7.27.49176 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). ConnectTimeout
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.GetAndRefreshAsync(String key, Boolean getData, CancellationToken token)
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.GetAsync(String key, CancellationToken token)
+   at Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions.GetStringAsync(IDistributedCache cache, String key, CancellationToken token)
+   at BlogCMS.API.Repositories.PostRepository.GetAllPostsAsync() in C:\Users\ASUS\blog cms\backend\BlogCMS.API\Repositories\PostRepository.cs:line 32
+   at BlogCMS.API.Services.PostService.GetAllPostsAsync() in C:\Users\ASUS\blog cms\backend\BlogCMS.API\Services\PostService.cs:line 20
+   at BlogCMS.API.Controllers.PostsController.GetPosts(String category) in C:\Users\ASUS\blog cms\backend\BlogCMS.API\Controllers\PostsController.cs:line 41
+2026-03-07 21:05:12.903 +05:30 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-07 21:05:12.908 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API) in 5159.0268ms
+2026-03-07 21:05:12.911 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-03-07 21:05:12.915 +05:30 [INF] The response could not be cached for this request.
+2026-03-07 21:05:12.918 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts - 500 null application/json; charset=utf-8 5202.8352ms
+2026-03-07 21:09:30.732 +05:30 [INF] Application is shutting down...
+2026-03-07 21:26:20.306 +05:30 [INF] Starting Blog CMS API
+2026-03-07 21:26:21.312 +05:30 [INF] Using in-memory cache
+2026-03-07 21:26:21.631 +05:30 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-07 21:26:22.698 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2026-03-07 21:26:22.711 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2026-03-07 21:26:23.071 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2026-03-07 21:26:23.158 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2026-03-07 21:26:23.220 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2026-03-07 21:26:23.253 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-03-07 21:26:23.358 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-03-07 21:26:23.386 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Posts" AS "p")
+2026-03-07 21:26:23.389 +05:30 [INF] Database seeded successfully
+2026-03-07 21:26:23.394 +05:30 [INF] Blog CMS API started successfully
+2026-03-07 21:26:23.505 +05:30 [INF] Now listening on: http://localhost:5000
+2026-03-07 21:26:23.508 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-07 21:26:23.510 +05:30 [INF] Hosting environment: Development
+2026-03-07 21:26:23.511 +05:30 [INF] Content root path: C:\Users\ASUS\blog cms\backend\BlogCMS.API
+2026-03-07 21:27:33.372 +05:30 [INF] Application is shutting down...
+2026-03-07 21:29:24.878 +05:30 [INF] Starting Blog CMS API
+2026-03-07 21:29:25.007 +05:30 [INF] Using in-memory cache
+2026-03-07 21:29:25.252 +05:30 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-07 21:29:25.888 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2026-03-07 21:29:25.900 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2026-03-07 21:29:26.342 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2026-03-07 21:29:26.422 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2026-03-07 21:29:26.426 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2026-03-07 21:29:26.450 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-03-07 21:29:26.603 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-03-07 21:29:26.619 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Posts" AS "p")
+2026-03-07 21:29:26.622 +05:30 [INF] Database seeded successfully
+2026-03-07 21:29:26.629 +05:30 [INF] Blog CMS API started successfully
+2026-03-07 21:29:26.732 +05:30 [INF] Now listening on: http://localhost:5000
+2026-03-07 21:29:26.736 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-07 21:29:26.737 +05:30 [INF] Hosting environment: Development
+2026-03-07 21:29:26.738 +05:30 [INF] Content root path: C:\Users\ASUS\blog cms\backend\BlogCMS.API
+2026-03-07 21:37:04.898 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts - null null
+2026-03-07 21:37:05.150 +05:30 [INF] No cached response available for this request.
+2026-03-07 21:37:05.295 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-03-07 21:37:05.375 +05:30 [INF] Route matched with {action = "GetPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] GetPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-03-07 21:37:05.535 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."Content", "p"."CreatedAt", "p"."CreatedBy", "p"."IsPublished", "p"."Title", "p"."UpdatedAt"
+FROM "Posts" AS "p"
+WHERE "p"."IsPublished"
+ORDER BY "p"."CreatedAt" DESC
+2026-03-07 21:37:05.718 +05:30 [INF] Retrieved 3 posts from database and cached them
+2026-03-07 21:37:05.738 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[BlogCMS.API.Models.Post, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BlogCMS.API.DTOs.PostResponseDto, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-07 21:37:05.821 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API) in 426.8935ms
+2026-03-07 21:37:05.827 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-03-07 21:37:05.830 +05:30 [INF] The response could not be cached for this request.
+2026-03-07 21:37:05.846 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts - 200 null application/json; charset=utf-8 953.8611ms
+2026-03-07 21:42:49.314 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts - null null
+2026-03-07 21:42:49.331 +05:30 [INF] No cached response available for this request.
+2026-03-07 21:42:49.343 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-03-07 21:42:49.350 +05:30 [INF] Route matched with {action = "GetPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] GetPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-03-07 21:42:49.613 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."Content", "p"."CreatedAt", "p"."CreatedBy", "p"."IsPublished", "p"."Title", "p"."UpdatedAt"
+FROM "Posts" AS "p"
+WHERE "p"."IsPublished"
+ORDER BY "p"."CreatedAt" DESC
+2026-03-07 21:42:49.622 +05:30 [INF] Retrieved 3 posts from database and cached them
+2026-03-07 21:42:49.627 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[BlogCMS.API.Models.Post, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BlogCMS.API.DTOs.PostResponseDto, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-07 21:42:49.634 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API) in 275.2129ms
+2026-03-07 21:42:49.638 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-03-07 21:42:49.642 +05:30 [INF] The response could not be cached for this request.
+2026-03-07 21:42:49.643 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts - 200 null application/json; charset=utf-8 329.6907ms
+2026-03-07 21:44:19.465 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts - null null
+2026-03-07 21:44:19.476 +05:30 [INF] No cached response available for this request.
+2026-03-07 21:44:19.491 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-03-07 21:44:19.497 +05:30 [INF] Route matched with {action = "GetPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] GetPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-03-07 21:44:19.515 +05:30 [INF] Retrieved all posts from cache
+2026-03-07 21:44:19.545 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[BlogCMS.API.Models.Post, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BlogCMS.API.DTOs.PostResponseDto, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-07 21:44:19.551 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API) in 49.9417ms
+2026-03-07 21:44:19.555 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-03-07 21:44:19.557 +05:30 [INF] The response could not be cached for this request.
+2026-03-07 21:44:19.559 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts - 200 null application/json; charset=utf-8 94.0715ms
+2026-03-07 21:44:35.674 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts?category=Tech - null null
+2026-03-07 21:44:35.680 +05:30 [INF] No cached response available for this request.
+2026-03-07 21:44:35.694 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-03-07 21:44:35.699 +05:30 [INF] Route matched with {action = "GetPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] GetPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-03-07 21:44:35.748 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__category_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."Content", "p"."CreatedAt", "p"."CreatedBy", "p"."IsPublished", "p"."Title", "p"."UpdatedAt"
+FROM "Posts" AS "p"
+WHERE "p"."Category" = @__category_0 AND "p"."IsPublished"
+ORDER BY "p"."CreatedAt" DESC
+2026-03-07 21:44:35.754 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[BlogCMS.API.Models.Post, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BlogCMS.API.DTOs.PostResponseDto, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-07 21:44:35.760 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API) in 54.9377ms
+2026-03-07 21:44:35.762 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-03-07 21:44:35.765 +05:30 [INF] The response could not be cached for this request.
+2026-03-07 21:44:35.766 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts?category=Tech - 200 null application/json; charset=utf-8 92.5741ms
+2026-03-07 21:44:50.928 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts/search?q=college - null null
+2026-03-07 21:44:50.936 +05:30 [INF] No cached response available for this request.
+2026-03-07 21:44:50.940 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.SearchPosts (BlogCMS.API)'
+2026-03-07 21:44:50.972 +05:30 [INF] Route matched with {action = "SearchPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] SearchPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-03-07 21:44:51.090 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__searchTerm_0='?' (Size = 7)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."Content", "p"."CreatedAt", "p"."CreatedBy", "p"."IsPublished", "p"."Title", "p"."UpdatedAt"
+FROM "Posts" AS "p"
+WHERE "p"."IsPublished" AND (instr(lower("p"."Title"), @__searchTerm_0) > 0 OR instr(lower("p"."Content"), @__searchTerm_0) > 0 OR instr(lower("p"."Category"), @__searchTerm_0) > 0)
+ORDER BY "p"."CreatedAt" DESC
+2026-03-07 21:44:51.098 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[BlogCMS.API.Models.Post, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BlogCMS.API.DTOs.PostResponseDto, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-07 21:44:51.105 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.SearchPosts (BlogCMS.API) in 125.7598ms
+2026-03-07 21:44:51.108 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.SearchPosts (BlogCMS.API)'
+2026-03-07 21:44:51.110 +05:30 [INF] The response could not be cached for this request.
+2026-03-07 21:44:51.112 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts/search?q=college - 200 null application/json; charset=utf-8 183.6138ms
+2026-03-07 21:45:00.148 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts/1 - null null
+2026-03-07 21:45:00.153 +05:30 [INF] No cached response available for this request.
+2026-03-07 21:45:00.155 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPost (BlogCMS.API)'
+2026-03-07 21:45:00.184 +05:30 [INF] Route matched with {action = "GetPost", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BlogCMS.API.DTOs.PostResponseDto]] GetPost(Int32) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-03-07 21:45:00.247 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."Content", "p"."CreatedAt", "p"."CreatedBy", "p"."IsPublished", "p"."Title", "p"."UpdatedAt"
+FROM "Posts" AS "p"
+WHERE "p"."Id" = @__p_0
+LIMIT 1
+2026-03-07 21:45:00.252 +05:30 [INF] Retrieved post 1 from database and cached it
+2026-03-07 21:45:00.254 +05:30 [INF] Executing OkObjectResult, writing value of type 'BlogCMS.API.DTOs.PostResponseDto'.
+2026-03-07 21:45:00.258 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPost (BlogCMS.API) in 68.6893ms
+2026-03-07 21:45:00.260 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPost (BlogCMS.API)'
+2026-03-07 21:45:00.261 +05:30 [INF] The response could not be cached for this request.
+2026-03-07 21:45:00.262 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts/1 - 200 null application/json; charset=utf-8 114.5132ms
+2026-03-07 21:45:31.992 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/Auth/login - application/json 55
+2026-03-07 21:45:32.002 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.AuthController.Login (BlogCMS.API)'
+2026-03-07 21:45:32.032 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BlogCMS.API.DTOs.AuthResponseDto]] Login(BlogCMS.API.DTOs.LoginDto) on controller BlogCMS.API.Controllers.AuthController (BlogCMS.API).
+2026-03-07 21:45:32.092 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-03-07 21:45:32.458 +05:30 [INF] User logged in successfully: admin@blogcms.com
+2026-03-07 21:45:32.544 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a0"."Name"
+FROM "AspNetUserRoles" AS "a"
+INNER JOIN "AspNetRoles" AS "a0" ON "a"."RoleId" = "a0"."Id"
+WHERE "a"."UserId" = @__userId_0
+2026-03-07 21:45:32.658 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2026-03-07 21:45:32.669 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."CreatedAt", "a"."Email", "a"."EmailConfirmed", "a"."FullName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."RefreshToken", "a"."RefreshTokenExpiryTime", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-03-07 21:45:32.943 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p18='?' (Size = 36), @p0='?' (DbType = Int32), @p1='?' (Size = 36), @p19='?' (Size = 36), @p2='?' (DbType = DateTime), @p3='?' (Size = 17), @p4='?' (DbType = Boolean), @p5='?' (Size = 20), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 17), @p9='?' (Size = 17), @p10='?' (Size = 84), @p11='?', @p12='?' (DbType = Boolean), @p13='?' (Size = 44), @p14='?' (DbType = DateTime), @p15='?' (Size = 32), @p16='?' (DbType = Boolean), @p17='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "CreatedAt" = @p2, "Email" = @p3, "EmailConfirmed" = @p4, "FullName" = @p5, "LockoutEnabled" = @p6, "LockoutEnd" = @p7, "NormalizedEmail" = @p8, "NormalizedUserName" = @p9, "PasswordHash" = @p10, "PhoneNumber" = @p11, "PhoneNumberConfirmed" = @p12, "RefreshToken" = @p13, "RefreshTokenExpiryTime" = @p14, "SecurityStamp" = @p15, "TwoFactorEnabled" = @p16, "UserName" = @p17
+WHERE "Id" = @p18 AND "ConcurrencyStamp" = @p19
+RETURNING 1;
+2026-03-07 21:45:32.992 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a0"."Name"
+FROM "AspNetUserRoles" AS "a"
+INNER JOIN "AspNetRoles" AS "a0" ON "a"."RoleId" = "a0"."Id"
+WHERE "a"."UserId" = @__userId_0
+2026-03-07 21:45:32.998 +05:30 [INF] Executing OkObjectResult, writing value of type 'BlogCMS.API.DTOs.AuthResponseDto'.
+2026-03-07 21:45:33.010 +05:30 [INF] Executed action BlogCMS.API.Controllers.AuthController.Login (BlogCMS.API) in 972.4475ms
+2026-03-07 21:45:33.013 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.AuthController.Login (BlogCMS.API)'
+2026-03-07 21:45:33.015 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/v1/Auth/login - 200 null application/json; charset=utf-8 1023.5563ms
+2026-03-07 21:45:58.800 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger - null null
+2026-03-07 21:45:58.812 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger - 301 0 null 12.0415ms
+2026-03-07 21:45:59.184 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2026-03-07 21:45:59.357 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 172.5541ms
+2026-03-07 21:45:59.374 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui.css - null null
+2026-03-07 21:45:59.389 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-bundle.js - null null
+2026-03-07 21:45:59.390 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.css - null null
+2026-03-07 21:45:59.391 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-standalone-preset.js - null null
+2026-03-07 21:45:59.392 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.js - null null
+2026-03-07 21:45:59.456 +05:30 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2026-03-07 21:45:59.474 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.js - 200 null application/javascript;charset=utf-8 81.975ms
+2026-03-07 21:45:59.476 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.css - 200 202 text/css 90.8955ms
+2026-03-07 21:45:59.507 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-03-07 21:45:59.542 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-03-07 21:45:59.555 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-bundle.js - 200 1426001 text/javascript 165.5834ms
+2026-03-07 21:45:59.555 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-standalone-preset.js - 200 230007 text/javascript 164.217ms
+2026-03-07 21:45:59.582 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-03-07 21:45:59.616 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui.css - 200 152035 text/css 242.2075ms
+2026-03-07 21:45:59.759 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2026-03-07 21:45:59.796 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/favicon-32x32.png - null null
+2026-03-07 21:45:59.803 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2026-03-07 21:45:59.806 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/favicon-32x32.png - 200 628 image/png 9.6768ms
+2026-03-07 21:46:00.137 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 377.6521ms
+2026-03-07 21:48:05.093 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2026-03-07 21:48:05.099 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 6.1388ms
+2026-03-07 21:48:05.134 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.js - null null
+2026-03-07 21:48:05.139 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.js - 200 null application/javascript;charset=utf-8 4.8429ms
+2026-03-07 21:48:05.360 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2026-03-07 21:48:05.430 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 69.2643ms
+2026-03-07 21:48:36.617 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts - null null
+2026-03-07 21:48:36.623 +05:30 [INF] No cached response available for this request.
+2026-03-07 21:48:36.624 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-03-07 21:48:36.628 +05:30 [INF] Route matched with {action = "GetPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] GetPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-03-07 21:48:36.638 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."Content", "p"."CreatedAt", "p"."CreatedBy", "p"."IsPublished", "p"."Title", "p"."UpdatedAt"
+FROM "Posts" AS "p"
+WHERE "p"."IsPublished"
+ORDER BY "p"."CreatedAt" DESC
+2026-03-07 21:48:36.653 +05:30 [INF] Retrieved 3 posts from database and cached them
+2026-03-07 21:48:36.661 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[BlogCMS.API.Models.Post, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BlogCMS.API.DTOs.PostResponseDto, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-07 21:48:36.668 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API) in 33.9695ms
+2026-03-07 21:48:36.671 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-03-07 21:48:36.675 +05:30 [INF] The response could not be cached for this request.
+2026-03-07 21:48:36.678 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts - 200 null application/json; charset=utf-8 59.8539ms
+2026-03-07 21:51:39.164 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts?category=tech - null null
+2026-03-07 21:51:39.169 +05:30 [INF] No cached response available for this request.
+2026-03-07 21:51:39.171 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-03-07 21:51:39.175 +05:30 [INF] Route matched with {action = "GetPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] GetPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-03-07 21:51:39.185 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__category_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."Content", "p"."CreatedAt", "p"."CreatedBy", "p"."IsPublished", "p"."Title", "p"."UpdatedAt"
+FROM "Posts" AS "p"
+WHERE "p"."Category" = @__category_0 AND "p"."IsPublished"
+ORDER BY "p"."CreatedAt" DESC
+2026-03-07 21:51:39.197 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[BlogCMS.API.Models.Post, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BlogCMS.API.DTOs.PostResponseDto, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-07 21:51:39.203 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API) in 22.306ms
+2026-03-07 21:51:39.207 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-03-07 21:51:39.210 +05:30 [INF] The response could not be cached for this request.
+2026-03-07 21:51:39.214 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts?category=tech - 200 null application/json; charset=utf-8 49.3239ms
+2026-03-07 21:51:51.263 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2026-03-07 21:51:51.269 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 6.3139ms
+2026-03-07 21:51:51.302 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.js - null null
+2026-03-07 21:51:51.308 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.js - 200 null application/javascript;charset=utf-8 5.6201ms
+2026-03-07 21:51:51.375 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2026-03-07 21:51:51.410 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 34.4085ms
+2026-03-07 21:52:28.325 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts?category=tech - null null
+2026-03-07 21:52:28.333 +05:30 [INF] No cached response available for this request.
+2026-03-07 21:52:28.335 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-03-07 21:52:28.339 +05:30 [INF] Route matched with {action = "GetPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] GetPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-03-07 21:52:28.345 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[BlogCMS.API.Models.Post, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BlogCMS.API.DTOs.PostResponseDto, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-07 21:52:28.354 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API) in 10.4481ms
+2026-03-07 21:52:28.357 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-03-07 21:52:28.360 +05:30 [INF] The response could not be cached for this request.
+2026-03-07 21:52:28.363 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts?category=tech - 200 null application/json; charset=utf-8 37.2229ms
+2026-03-07 21:52:41.415 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts - null null
+2026-03-07 21:52:41.423 +05:30 [INF] No cached response available for this request.
+2026-03-07 21:52:41.426 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-03-07 21:52:41.431 +05:30 [INF] Route matched with {action = "GetPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] GetPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-03-07 21:52:41.442 +05:30 [INF] Retrieved all posts from cache
+2026-03-07 21:52:41.446 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[BlogCMS.API.Models.Post, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BlogCMS.API.DTOs.PostResponseDto, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-07 21:52:41.454 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API) in 12.8919ms
+2026-03-07 21:52:41.460 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPosts (BlogCMS.API)'
+2026-03-07 21:52:41.464 +05:30 [INF] The response could not be cached for this request.
+2026-03-07 21:52:41.468 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts - 200 null application/json; charset=utf-8 52.8847ms
+2026-03-07 21:54:15.437 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts/1 - null null
+2026-03-07 21:54:15.442 +05:30 [INF] No cached response available for this request.
+2026-03-07 21:54:15.443 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.GetPost (BlogCMS.API)'
+2026-03-07 21:54:15.447 +05:30 [INF] Route matched with {action = "GetPost", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BlogCMS.API.DTOs.PostResponseDto]] GetPost(Int32) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-03-07 21:54:15.462 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."Content", "p"."CreatedAt", "p"."CreatedBy", "p"."IsPublished", "p"."Title", "p"."UpdatedAt"
+FROM "Posts" AS "p"
+WHERE "p"."Id" = @__p_0
+LIMIT 1
+2026-03-07 21:54:15.471 +05:30 [INF] Retrieved post 1 from database and cached it
+2026-03-07 21:54:15.476 +05:30 [INF] Executing OkObjectResult, writing value of type 'BlogCMS.API.DTOs.PostResponseDto'.
+2026-03-07 21:54:15.481 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.GetPost (BlogCMS.API) in 28.1009ms
+2026-03-07 21:54:15.486 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.GetPost (BlogCMS.API)'
+2026-03-07 21:54:15.490 +05:30 [INF] The response could not be cached for this request.
+2026-03-07 21:54:15.493 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts/1 - 200 null application/json; charset=utf-8 56.6777ms
+2026-03-07 21:54:50.148 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/Posts/search?q=college - null null
+2026-03-07 21:54:50.155 +05:30 [INF] No cached response available for this request.
+2026-03-07 21:54:50.157 +05:30 [INF] Executing endpoint 'BlogCMS.API.Controllers.PostsController.SearchPosts (BlogCMS.API)'
+2026-03-07 21:54:50.164 +05:30 [INF] Route matched with {action = "SearchPosts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BlogCMS.API.DTOs.PostResponseDto]]] SearchPosts(System.String) on controller BlogCMS.API.Controllers.PostsController (BlogCMS.API).
+2026-03-07 21:54:50.172 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__searchTerm_0='?' (Size = 7)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."Content", "p"."CreatedAt", "p"."CreatedBy", "p"."IsPublished", "p"."Title", "p"."UpdatedAt"
+FROM "Posts" AS "p"
+WHERE "p"."IsPublished" AND (instr(lower("p"."Title"), @__searchTerm_0) > 0 OR instr(lower("p"."Content"), @__searchTerm_0) > 0 OR instr(lower("p"."Category"), @__searchTerm_0) > 0)
+ORDER BY "p"."CreatedAt" DESC
+2026-03-07 21:54:50.183 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[BlogCMS.API.Models.Post, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[BlogCMS.API.DTOs.PostResponseDto, BlogCMS.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-07 21:54:50.187 +05:30 [INF] Executed action BlogCMS.API.Controllers.PostsController.SearchPosts (BlogCMS.API) in 18.5363ms
+2026-03-07 21:54:50.190 +05:30 [INF] Executed endpoint 'BlogCMS.API.Controllers.PostsController.SearchPosts (BlogCMS.API)'
+2026-03-07 21:54:50.193 +05:30 [INF] The response could not be cached for this request.
+2026-03-07 21:54:50.196 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/Posts/search?q=college - 200 null application/json; charset=utf-8 47.8833ms

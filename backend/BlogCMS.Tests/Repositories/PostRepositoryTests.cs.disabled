@@ -1,0 +1,200 @@
+using BlogCMS.API.Data;
+using BlogCMS.API.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Distributed;
+using System.Text.Json;
+
+namespace BlogCMS.API.Repositories
+{
+    public class PostRepository : IPostRepository
+    {
+        private readonly ApplicationDbContext _context;
+        private readonly IDistributedCache _cache;
+        private readonly ILogger<PostRepository> _logger;
+
+        public PostRepository(
+            ApplicationDbContext context, 
+            IDistributedCache cache,
+            ILogger<PostRepository> logger)
+        {
+            _context = context;
+            _cache = cache;
+            _logger = logger;
+        }
+
+        public async Task<IEnumerable<Post>> GetAllPostsAsync()
+        {
+            const string cacheKey = "all_posts";
+            
+            try
+            {
+                // Try to get from cache (with error handling)
+                try
+                {
+                    var cachedPosts = await _cache.GetStringAsync(cacheKey);
+                    if (!string.IsNullOrEmpty(cachedPosts))
+                    {
+                        var posts = JsonSerializer.Deserialize<IEnumerable<Post>>(cachedPosts);
+                        if (posts != null)
+                        {
+                            _logger.LogInformation("Retrieved all posts from cache");
+                            return posts;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogWarning(ex, "Cache unavailable, falling back to database");
+                }
+
+                // If not in cache or cache failed, get from database
+                var posts = await _context.Posts
+                    .Where(p => p.IsPublished)
+                    .OrderByDescending(p => p.CreatedAt)
+                    .ToListAsync();
+
+                // Try to store in cache (but don't fail if cache is unavailable)
+                try
+                {
+                    var cacheOptions = new DistributedCacheEntryOptions
+                    {
+                        AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(5)
+                    };
+                    await _cache.SetStringAsync(cacheKey, JsonSerializer.Serialize(posts), cacheOptions);
+                    _logger.LogInformation("Cached {Count} posts", posts.Count);
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogWarning(ex, "Failed to cache posts");
+                }
+
+                return posts;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error retrieving all posts");
+                // Return empty list instead of throwing to prevent 500 errors
+                return new List<Post>();
+            }
+        }
+
+        public async Task<IEnumerable<Post>> GetPostsByCategoryAsync(string category)
+        {
+            try
+            {
+                return await _context.Posts
+                    .Where(p => p.Category == category && p.IsPublished)
+                    .OrderByDescending(p => p.CreatedAt)
+                    .ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error retrieving posts by category {Category}", category);
+                return new List<Post>();
+            }
+        }
+
+        public async Task<Post?> GetPostByIdAsync(int id)
+        {
+            try
+            {
+                return await _context.Posts.FindAsync(id);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error retrieving post {PostId}", id);
+                return null;
+            }
+        }
+
+        public async Task<IEnumerable<Post>> SearchPostsAsync(string searchTerm)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(searchTerm))
+                    return await GetAllPostsAsync();
+
+                searchTerm = searchTerm.ToLower();
+                
+                return await _context.Posts
+                    .Where(p => p.IsPublished && 
+                               (p.Title.ToLower().Contains(searchTerm) || 
+                                p.Content.ToLower().Contains(searchTerm) ||
+                                p.Category.ToLower().Contains(searchTerm)))
+                    .OrderByDescending(p => p.CreatedAt)
+                    .ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error searching posts with term: {SearchTerm}", searchTerm);
+                return new List<Post>();
+            }
+        }
+
+        public async Task<Post> CreatePostAsync(Post post)
+        {
+            try
+            {
+                _context.Posts.Add(post);
+                await _context.SaveChangesAsync();
+                _logger.LogInformation("Created new post with ID {PostId}", post.Id);
+                return post;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error creating post");
+                throw;
+            }
+        }
+
+        public async Task<Post> UpdatePostAsync(Post post)
+        {
+            try
+            {
+                post.UpdatedAt = DateTime.UtcNow;
+                _context.Entry(post).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+                _logger.LogInformation("Updated post {PostId}", post.Id);
+                return post;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error updating post {PostId}", post.Id);
+                throw;
+            }
+        }
+
+        public async Task<bool> DeletePostAsync(int id)
+        {
+            try
+            {
+                var post = await _context.Posts.FindAsync(id);
+                if (post == null)
+                    return false;
+
+                _context.Posts.Remove(post);
+                await _context.SaveChangesAsync();
+                _logger.LogInformation("Deleted post {PostId}", id);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error deleting post {PostId}", id);
+                return false;
+            }
+        }
+
+        public async Task<bool> PostExistsAsync(int id)
+        {
+            try
+            {
+                return await _context.Posts.AnyAsync(p => p.Id == id);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error checking if post {PostId} exists", id);
+                return false;
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog CMS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>My Blog CMS</h1>
+ 
+    <!-- Navigation -->
+    <div class="nav-bar">
+      <a href="index.html" class="active">Home</a>
+      <a href="admin.html">Admin Panel</a>
+    </div>
+
+    <!-- Category Buttons -->
+    <div class="category-buttons">
+      <button onclick="filterPosts('Tech')">Tech</button>
+      <button onclick="filterPosts('College')">College/Education</button>
+      <button onclick="filterPosts('Lifestyle')">Lifestyle</button>
+      <button onclick="filterPosts('News')">News/Announcement</button>
+      <button onclick="loadAllPosts()">All Posts</button>
+    </div>
+
+    <!-- Search Box -->
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search posts..." onkeyup="searchPosts()">
+      <button onclick="searchPosts()">Search</button>
+    </div>
+
+    <!-- Posts Container -->
+    <div id="posts-container">
+      <div class="loading">Loading posts...</div>
+    </div>
+
+    <!-- Login Status (for debugging) -->
+    <div id="login-status" class="login-status"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
