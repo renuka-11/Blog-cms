@@ -173,3 +173,4 @@ C:\Users\ASUS\blog cms\backend\BlogCMS.API\obj\Debug\net10.0\refint\BlogCMS.API.
 C:\Users\ASUS\blog cms\backend\BlogCMS.API\obj\Debug\net10.0\BlogCMS.API.pdb
 C:\Users\ASUS\blog cms\backend\BlogCMS.API\obj\Debug\net10.0\BlogCMS.API.genruntimeconfig.cache
 C:\Users\ASUS\blog cms\backend\BlogCMS.API\obj\Debug\net10.0\ref\BlogCMS.API.dll
+c:\Users\ASUS\blog cms\backend\BlogCMS.API\obj\Debug\net10.0\BlogCMS.API.sourcelink.json

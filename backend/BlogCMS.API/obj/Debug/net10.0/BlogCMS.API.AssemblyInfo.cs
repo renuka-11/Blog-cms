@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlogCMS.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+232b4db39f0564fd81016870e9fbdf8c9bf9d6fb")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlogCMS.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlogCMS.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
